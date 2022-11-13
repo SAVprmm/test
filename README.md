@@ -34,7 +34,13 @@ download zip
   ```
   follow screen instructions
 
-2. {help}
+2. without parameters
+  ```sh
+  php app.php
+  ```
+  return list of registered commands
+
+3. {help}
   ```sh
   php app.php add {help}
   ```
