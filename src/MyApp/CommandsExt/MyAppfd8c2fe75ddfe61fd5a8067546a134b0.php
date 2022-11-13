@@ -15,7 +15,7 @@ class MyAppfd8c2fe75ddfe61fd5a8067546a134b0 extends CommandCore {
 	/**
 	 * construct
 	 *
-     * @return void
+	 * @return void
 	 */
 	public function __construct() {
 		parent::__construct();
@@ -28,7 +28,7 @@ class MyAppfd8c2fe75ddfe61fd5a8067546a134b0 extends CommandCore {
 	/**
 	 * main action of command. redefining now.
 	 *
-     * @return string
+	 * @return string
 	 */
 	protected function mainCommand() {
 		$arr = array(

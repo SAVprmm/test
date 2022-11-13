@@ -15,7 +15,7 @@ class MyAppAdd extends CommandCore {
 	/**
 	 * construct
 	 *
-     * @return void
+	 * @return void
 	 */
 	public function __construct() {
 		parent::__construct();
@@ -33,7 +33,7 @@ class MyAppAdd extends CommandCore {
 	/**
 	 * main action of command. redefining now.
 	 *
-     * @return string
+	 * @return string
 	 */
 	protected function mainCommand() {
 
@@ -44,7 +44,7 @@ class MyAppAdd extends CommandCore {
 	 * @param integer $stepId current step id
 	 * @param string $inParameter not used there. needs for call_user_func count parameters
 	 *
-     * @return string
+	 * @return string
 	 */
 	public function step0Pre($stepId, $inParameter=null) {
 		$stepConfiguration = $this->listInteractionScripts[$stepId];
@@ -62,7 +62,7 @@ class MyAppAdd extends CommandCore {
 	 * @param integer $stepId current step id
 	 * @param string $inParameter any parameter of client written in console
 	 *
-     * @return integer >=1 next step is, 0 step continue, -1 is ended 
+	 * @return integer >=1 next step is, 0 step continue, -1 is ended 
 	 */
 	public function step0Post($stepId, $inParameter) {
 		$stepConfiguration = $this->listInteractionScripts[$stepId];
@@ -108,7 +108,7 @@ class MyAppAdd extends CommandCore {
 	 * @param integer $stepId current step id
 	 * @param string $inParameter not used there. needs for call_user_func count parameters
 	 *
-     * @return string
+	 * @return string
 	 */
 	public function step1Pre($stepId, $inParameter=null) {
 		$stepConfiguration = $this->listInteractionScripts[$stepId];
@@ -126,7 +126,7 @@ class MyAppAdd extends CommandCore {
 	 * @param integer $stepId current step id
 	 * @param string $inParameter any parameter of client written in console
 	 *
-     * @return integer >=1 next step is, 0 step continue, -1 is ended 
+	 * @return integer >=1 next step is, 0 step continue, -1 is ended 
 	 */
 	public function step1Post($stepId, $inParameter) {
 		$stepConfiguration = $this->listInteractionScripts[$stepId];
@@ -165,7 +165,7 @@ class MyAppAdd extends CommandCore {
 	 * @param integer $stepId current step id
 	 * @param string $inParameter not used there. needs for call_user_func count parameters
 	 *
-     * @return string
+	 * @return string
 	 */
 	public function step2Pre($stepId, $inParameter=null) {
 		$stepConfiguration = $this->listInteractionScripts[$stepId];
@@ -183,7 +183,7 @@ class MyAppAdd extends CommandCore {
 	 * @param integer $stepId current step id
 	 * @param string $inParameter any parameter of client written in console
 	 *
-     * @return integer >=1 next step is, 0 step continue, -1 is ended 
+	 * @return integer >=1 next step is, 0 step continue, -1 is ended 
 	 */
 	public function step2Post($stepId, $inParameter) {
 		$stepConfiguration = $this->listInteractionScripts[$stepId];
@@ -233,7 +233,7 @@ class MyAppAdd extends CommandCore {
 	 * @param integer $stepId current step id
 	 * @param string $inParameter not used there. needs for call_user_func count parameters
 	 *
-     * @return string
+	 * @return string
 	 */
 	public function step3Pre($stepId, $inParameter=null) {
 		$stepConfiguration = $this->listInteractionScripts[$stepId];
@@ -267,7 +267,7 @@ class MyAppAdd extends CommandCore {
 	 * @param integer $stepId current step id
 	 * @param string $inParameter any parameter of client written in console
 	 *
-     * @return integer >=1 next step is, 0 step continue, -1 is ended 
+	 * @return integer >=1 next step is, 0 step continue, -1 is ended 
 	 */
 	public function step3Post($stepId, $inParameter) {
 		/** /echo 'i test on step 1 :'.PHP_EOL;

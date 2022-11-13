@@ -34,7 +34,7 @@ trait Parse {
 	 * read argv from global or income array
 	 * @param bool|array $cmd false default value only or previously get array
 	 *
-     * @return void
+	 * @return void
 	 */
 	public function readCommandLine($cmd = false){
 		$listInParameters = array();
@@ -60,7 +60,7 @@ trait Parse {
 	 * @param string $elemen text version of command part
 	 * @param integer $key right now work with int key of array
 	 *
-     * @return void
+	 * @return void
 	 */
 	private function eachParse($element, $key) {
 		if($key === 0) {
@@ -109,7 +109,7 @@ trait Parse {
 	 * @param integer $key right now work with int key of array
 	 * @param string $methodName string key to record everything in its place
 	 *
-     * @return void
+	 * @return void
 	 */
 	private function eachCommand($element, $key, $methodName) {
 		$this->arrayCmdParam[$methodName][] = $element;
@@ -121,7 +121,7 @@ trait Parse {
 	 * @param integer $key right now work with int key of array
 	 * @param string $methodName string key to save everything in its place
 	 *
-     * @return void
+	 * @return void
 	 */
 	private function eachArguments($element, $key, $methodName) {
 		//null
@@ -133,7 +133,7 @@ trait Parse {
 	 * @param integer $key right now work with int key of array
 	 * @param string $methodName string key to save everything in its place
 	 *
-     * @return void
+	 * @return void
 	 */
 	private function eachOptions($element, $key, $methodName) {
 		//null
@@ -144,7 +144,7 @@ trait Parse {
 	 * @param string $elemen text version of string in proprietary format 
 	 * @param string $methodName string key to save everything in its place
 	 *
-     * @return void
+	 * @return void
 	 */
 	private function likeJsonDecode($element, $methodName) {
 		if( count( $this->paternSearch ) == 0 ) {
@@ -190,7 +190,7 @@ trait Parse {
 	/**
 	 * close search free text as command name
 	 *
-     * @return void
+	 * @return void
 	 */
 	private function readyComamndName() {
 		if ($this->arrayCmdParam['command_ready'] === true) {

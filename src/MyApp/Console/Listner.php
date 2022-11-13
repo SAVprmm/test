@@ -15,7 +15,7 @@ class Listner {
 	/**
 	 * construct. start from there
 	 * 
-     * @return void
+	 * @return void
 	 */
 	public function __construct() {
 		$this->startListen();
@@ -24,7 +24,7 @@ class Listner {
 	/**
 	 * start listen
 	 * 
-     * @return void
+	 * @return void
 	 */
 	public function startListen() {
 		$this->readCommandLine();
@@ -71,7 +71,7 @@ class Listner {
 	 * generate public response of command
 	 * @var array $comamndResponse list of error
 	 * 
-     * @return void
+	 * @return void
 	 */
 	private function dispayComamndResponse($comamndResponse) {
 		$display = array(
@@ -86,7 +86,7 @@ class Listner {
 	 * generate error text
 	 * @var array $errorList list of error
 	 * 
-     * @return void
+	 * @return void
 	 */
 	private function weHaveProblem($errorList) {
 		$display = array(

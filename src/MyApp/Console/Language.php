@@ -18,7 +18,7 @@ trait Language {
 	/**
 	 * construct. start from there
 	 * 
-     * @return void
+	 * @return void
 	 */
 	public function __construct() {
 		$this->initDictionary();
@@ -27,7 +27,7 @@ trait Language {
 	/**
 	 * initialization of dictionary, right now raw
 	 * 
-     * @return void
+	 * @return void
 	 */
 	protected static function initDictionary() {
 		if(self::$init) {
@@ -55,7 +55,7 @@ trait Language {
 	 * @param string $key of self::$strings
 	 * @param array $parameters parameters list for replace
 	 * 
-     * @return string
+	 * @return string
 	 */
 	public static function getLangStrByKey($key, $parameters = array()) {
 		self::initDictionary();

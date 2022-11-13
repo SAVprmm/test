@@ -15,7 +15,7 @@ class MyApp434d68bc193cb2f96be22064e921dff8 extends CommandCore {
 	/**
 	 * construct
 	 *
-     * @return void
+	 * @return void
 	 */
 	public function __construct() {
 		parent::__construct();
@@ -28,7 +28,7 @@ class MyApp434d68bc193cb2f96be22064e921dff8 extends CommandCore {
 	/**
 	 * main action of command. redefining now.
 	 *
-     * @return string
+	 * @return string
 	 */
 	protected function mainCommand() {
 		

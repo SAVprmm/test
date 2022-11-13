@@ -13,24 +13,24 @@ namespace MyApp\CommandsCore;
 abstract class CommandBase {
 	
 	/**
-     * Key name of command parameters for command name
-     *
-     * @var string
-     */
+	 * Key name of command parameters for command name
+	 *
+	 * @var string
+	 */
 	const PARAM_NME = 'command';
 	
 	/**
-     * Key name of command parameters for arguments
-     *
-     * @var string
-     */
+	 * Key name of command parameters for arguments
+	 *
+	 * @var string
+	 */
 	const PARAM_ARG = 'arguments';
 	 
 	 /**
-     * Key name of command parameters for options
-     *
-     * @var string
-     */
+	 * Key name of command parameters for options
+	 *
+	 * @var string
+	 */
 	const PARAM_OPT = 'options';
 	
 	/**
@@ -100,7 +100,7 @@ abstract class CommandBase {
 	/**
 	 * construct
 	 *
-     * @return void
+	 * @return void
 	 */
 	public function __construct() {
 
@@ -109,7 +109,7 @@ abstract class CommandBase {
 	/**
 	 * return name of command
 	 *
-     * @return string
+	 * @return string
 	 */
 	protected function name() {
 		return $this->name;
@@ -118,7 +118,7 @@ abstract class CommandBase {
 	/**
 	 * return help (name and desctiption) of command
 	 *
-     * @return string
+	 * @return string
 	 */
 	protected function callHelp() {
 		return 'command "'.$this->name().'":'.PHP_EOL.$this->desctiption;
@@ -127,7 +127,7 @@ abstract class CommandBase {
 	/**
 	 * return desctiption of command
 	 *
-     * @return string
+	 * @return string
 	 */
 	protected function description() {
 		return $this->desctiption;
@@ -136,7 +136,7 @@ abstract class CommandBase {
 	/**
 	 * checking incoming parameters and execute methods with high priority
 	 *
-     * @return string
+	 * @return string
 	 */
 	protected function firstPreScript() {
 		if(isset($this->commandParameters[self::PARAM_ARG]) && count($this->commandParameters[self::PARAM_ARG]) != 0) {
@@ -158,7 +158,7 @@ abstract class CommandBase {
 	 * @param array $inCmdParameters incoming parameters of command
 	 * @param array $inEnvironmentParameters incoming special environment parameters for methonds
 	 *
-     * @return bool
+	 * @return bool
 	 */
 	public function start($inCmdParameters, $inEnvironmentParameters = null) {
 		$this->isExecutingFinished = false;
@@ -177,7 +177,7 @@ abstract class CommandBase {
 	/**
 	 * abstract main action of command. must be defined
 	 *
-     * @return string
+	 * @return string
 	 */
 	abstract protected function mainCommand();
 	
@@ -188,7 +188,7 @@ abstract class CommandBase {
 	 * @param string $stopCommandSymbols stop combination for stdin
 	 * @param string $stopCommandHint descriptions of stop combination
 	 *
-     * @return void
+	 * @return void
 	 */
 	protected function addInteractionScript($preMethodName, $postMethodName, $stopCommandSymbols, $stopCommandHint = '') {
 		if (!$this->isInteractionMode) {
@@ -200,7 +200,7 @@ abstract class CommandBase {
 	/**
 	 * Return information about executions status, continue or stop
 	 *
-     * @return bool
+	 * @return bool
 	 */
 	public function continueExec() {
 		return !$this->isExecutingFinished;	
@@ -209,7 +209,7 @@ abstract class CommandBase {
 	/**
 	 * Return public result of execution of command
 	 *
-     * @return array
+	 * @return array
 	 */
 	public function getResponse() {
 		return $this->commandResponse;	
@@ -218,7 +218,7 @@ abstract class CommandBase {
 	/**
 	 * Return information about reservation of command name
 	 *
-     * @return bool
+	 * @return bool
 	 */
 	public function isReserved() {
 		return $this->reserved;
@@ -230,7 +230,7 @@ abstract class CommandBase {
 	 * @param bool $isPostActions pre(false) or post(true) execution
 	 * @param bool $inParameter incoming parameter
 	 *
-     * @return bool|string
+	 * @return bool|string
 	 */
 	public function stepExec($stepId, $isPostActions, $inParameter) {
 		return call_user_func(array($this, $this->listInteractionScripts[$stepId][($isPostActions?1:0)]), $stepId, $inParameter);
@@ -242,7 +242,7 @@ abstract class CommandBase {
 	 * @param string $stopSymbol stop symbols
 	 * @param integer $nextStep next step id (this needs for support "goto" style)
 	 *
-     * @return integer
+	 * @return integer
 	 */
 	public function stepTestStop($stepId, $stopSymbol, $nextStep) {
 		if($stopSymbol == $this->listInteractionScripts[$stepId][2]) {

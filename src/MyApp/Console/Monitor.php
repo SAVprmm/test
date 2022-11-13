@@ -15,7 +15,7 @@ trait Monitor {
 	 * write out all lines in special format
 	 * @param string|array $lines of displayable lines
 	 *
-     * @return void
+	 * @return void
 	 */
 	public function writeOut($lines) {
 		$this->foundScreenSize();
@@ -47,7 +47,7 @@ trait Monitor {
 	/**
 	 * try found max sumbols of one terminal line
 	 *
-     * @return void
+	 * @return void
 	 */
 	protected function foundScreenSize() {
 		if ($this->lineSize != 0) {
@@ -57,22 +57,22 @@ trait Monitor {
             if (PHP_OS_FAMILY === 'Windows') {
                 $cols = shell_exec('mode con');
                 /*
-                 * Состояние устройства CON:
-                 * --------------------------
-                 *     Строки:                300
-                 *     Столбцы:               80
-                 *     Скорость клавиатуры:   31
-                 *     Задержка клавиатуры:   1
-                 *     Кодовая страница:      866
-                 */
+            	 * Состояние устройства CON:
+            	 * --------------------------
+            	 *     Строки:                300
+            	 *     Столбцы:               80
+            	 *     Скорость клавиатуры:   31
+            	 *     Задержка клавиатуры:   1
+            	 *     Кодовая страница:      866
+            	 */
                 $array_cols = explode("\n", $cols);
                 $this->lineSize = trim(explode(':', $array_cols[4])[1]);
 
             } else {
                 $this->lineSize = exec('tput cols');
                 /*
-                 * 70
-                 */
+            	 * 70
+            	 */
             }
         } catch (Exception $ex) {
             $this->lineSize = 50;

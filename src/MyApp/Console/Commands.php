@@ -85,7 +85,7 @@ class Commands {
 	/**
 	 * construct
 	 *
-     * @return void
+	 * @return void
 	 */
 	public function __construct() {
 		$this->defaultCommanda = 'list';
@@ -98,7 +98,7 @@ class Commands {
 	/**
 	 * return name of default command
 	 *
-     * @return string
+	 * @return string
 	 */
 	public function getDefaultCommand() {
 		return $this->defaultCommanda;
@@ -107,7 +107,7 @@ class Commands {
 	/**
 	 * executing command
 	 *
-     * @return bool false on problem with executing
+	 * @return bool false on problem with executing
 	 */
 	public function commandDo() {
 		$this->interactionMode = false;
@@ -152,7 +152,7 @@ class Commands {
 	/**
 	 * returning status of need next user interaction
 	 *
-     * @return bool
+	 * @return bool
 	 */
 	public function commandNeedInteraction() {
 		return ( $this->interactionMode && $this->execCmd->continueExec() );
@@ -162,7 +162,7 @@ class Commands {
 	 * returning status of need next user interaction
 	 * @param array $inLine incoming line from stdin
 	 *
-     * @return string
+	 * @return string
 	 */
 	public function commandDoInteraction($inLine=null) {
 		if($this->interactionStep == -1) {//go from the first step
@@ -187,7 +187,7 @@ class Commands {
 	/**
 	 * Return public result of execution of command from instance
 	 *
-     * @return array()
+	 * @return array()
 	 */
 	public function commandGetResponse() {
 		return $this->execCmd->getResponse();	
@@ -197,7 +197,7 @@ class Commands {
 	 * set parameters of command
 	 * @param array $inParameters incoming parameters of command
 	 *
-     * @return void
+	 * @return void
 	 */
 	public function commandSetParameters($inParameters) {
 		$this->commandParameters = $inParameters;
@@ -207,7 +207,7 @@ class Commands {
 	 * Detecting type of executing command
 	 * @param array $inParameters incoming parameters of command
 	 *
-     * @return void
+	 * @return void
 	 */
 	private function commandTypeDetect() {
 		foreach(array($this->buildInCommandArea=>ucfirst($this->commandParameters['command']),$this->extCommandArea=>md5($this->commandParameters['command'])) as $execArea => $execCmd) {
@@ -232,7 +232,7 @@ class Commands {
 	 * @param string $errorLine line from
 	 * @param string $errorCode error code for replace some duplicate
 	 *
-     * @return void
+	 * @return void
 	 */
 	private function addError($errorText, $errorFunction='', $errorLine='', $errorCode = '') {
 		$error = array($errorText);
@@ -250,7 +250,7 @@ class Commands {
 	/**
 	 * return true if already have error
 	 *
-     * @return bool
+	 * @return bool
 	 */
 	public function isError() {
 		return (count($this->allError) != 0);
@@ -260,7 +260,7 @@ class Commands {
 	 * return error as array
 	 * @param string $format format of returned array
 	 *
-     * @return bool
+	 * @return bool
 	 */
 	public function getError($format = 'array') {
 		foreach($this->allError as $errorKey => $errorArray) {

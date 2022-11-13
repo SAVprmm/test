@@ -15,7 +15,7 @@ trait Validate {
 	 * valinating if all part of command is allowed
 	 * @param array $arrayListOverload list with default parameters
 	 *
-     * @return void
+	 * @return void
 	 */
 	public function validateCmdParameter($arrayListOverload) {
 		if( isset( $this->arrayCmdParam['command'] ) && ( is_null( $this->arrayCmdParam['command'] ) || strlen( $this->arrayCmdParam['command'] ) == 0 ) ) {
