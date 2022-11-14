@@ -18,12 +18,12 @@ download zip
 
 * Windows `cmd.exe>`
   ```sh
-  php app.php echo3 {verbose,overwrite}   [log_file=app.log]  {unlimited} [methods={create,update,delete}]   [paginate=50] {log}
+  >php app.php echo3 {verbose,overwrite}   [log_file=app.log]  {unlimited} [methods={create,update,delete}]   [paginate=50] {log}
   ```
   
 * Linux `ssh#`
   ```sh
-  php app.php echo3 \{verbose,overwrite\}   \[log_file=app.log\]  \{unlimited\} \[methods=\{create,update,delete\}\]   \[paginate=50\] \{log\}
+  #php app.php echo3 \{verbose,overwrite\}   \[log_file=app.log\]  \{unlimited\} \[methods=\{create,update,delete\}\]   \[paginate=50\] \{log\}
   ```
 **#!/bin/bash special symbols {}[]()$# and soo on are handled by POSIX**
 
@@ -102,7 +102,7 @@ download zip
     
     4.7. Execute new command
     ```sh
-    php app.php new_command_name \{verbose,overwrite\}   \[log_file=app.log\]  \{unlimited\} \[methods=\{create,update,delete\}\]   \[paginate=50\] \{log\}
+    #php app.php new_command_name \{verbose,overwrite\}   \[log_file=app.log\]  \{unlimited\} \[methods=\{create,update,delete\}\]   \[paginate=50\] \{log\}
     ```
     
     4.8. Will see all incoming parameters in user friendly format or error of parse
