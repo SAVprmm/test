@@ -25,7 +25,7 @@ download zip
   ```sh
   #php app.php echo3 \{verbose,overwrite\}   \[log_file=app.log\]  \{unlimited\} \[methods=\{create,update,delete\}\]   \[paginate=50\] \{log\}
   ```
-**#!/bin/bash special symbols {}[]()$# and soo on are handled by POSIX**
+**#!/bin/bash special symbols {}[]()$# and soo on are handled by POSIX** and must be escaped each single special symbol with a backslash
 
 #### Command and example
 1. add
